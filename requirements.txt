@@ -5,6 +5,6 @@ plotly==5.24.1
 streamlit==1.41.1
 textblob==0.19.0
 transformers==4.39.3
-tensorflow==2.15.0
+torch==2.5.0
 huggingface-hub==0.20.3
 hf_xet
