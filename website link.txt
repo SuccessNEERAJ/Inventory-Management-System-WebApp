@@ -1,0 +1,1 @@
+https://ai-driven-inventory-management-system.streamlit.app/

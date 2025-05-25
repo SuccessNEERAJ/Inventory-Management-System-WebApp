@@ -4,11 +4,12 @@ from transformers import pipeline, AutoTokenizer
 import json
 from datetime import datetime, timedelta
 import os
+import streamlit as st
 
 class NewsAnalyzer:
     def __init__(self, groq_api_key, event_registry_api_key):
-        self.groq_client = groq.Groq(api_key="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")
-        self.er = eventregistry.EventRegistry(apiKey="c3892498-706c-443a-a9a7-b194c52887b7")
+        self.groq_client = groq.Groq(api_key=st.Groq_API_Key)
+        self.er = eventregistry.EventRegistry(apiKey=st.Event_Registry)
         self.tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
         self.sentiment_pipeline = pipeline(
             "sentiment-analysis",
