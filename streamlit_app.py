@@ -23,8 +23,8 @@ EMAIL_CONFIG = {
 # Initialize session state
 if 'news_analyzer' not in st.session_state:
     st.session_state.news_analyzer = NewsAnalyzer(
-        groq_api_key="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",
-        event_registry_api_key="c3892498-706c-443a-a9a7-b194c52887b7"
+        groq_api_key=st.secrets["Groq_API_Key"],
+        event_registry_api_key=st.secrets["Event_Registry"]
     )
 if 'inventory_system' not in st.session_state:
     st.session_state.inventory_system = InventorySystem()

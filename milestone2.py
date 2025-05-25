@@ -8,8 +8,8 @@ import streamlit as st
 
 class NewsAnalyzer:
     def __init__(self, groq_api_key, event_registry_api_key):
-        self.groq_client = groq.Groq(api_key=st.Groq_API_Key)
-        self.er = eventregistry.EventRegistry(apiKey=st.Event_Registry)
+        self.groq_client = groq.Groq(api_key=groq_api_key)
+        self.er = eventregistry.EventRegistry(apiKey=event_registry_api_key)
         self.tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
         self.sentiment_pipeline = pipeline(
             "sentiment-analysis",
